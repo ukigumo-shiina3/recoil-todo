@@ -2,6 +2,7 @@ import { useRecoilValue } from "recoil";
 import { todoListState } from "../atom";
 import TodoListStats from "./TodoListStats";
 import TodoItemCreator from "./TodoItemCreator";
+import TodoItem from "./TodoItem";
 
 function TodoList() {
   // useRecoilValue: atomの値のみを取得する。Read Onlyなので状態の取得はできるが更新を行うことはできない
@@ -13,7 +14,7 @@ function TodoList() {
       <TodoListStats />
       <TodoItemCreator />
       {todoList.map((item) => (
-        <div key={item.id}>{item.title}</div>
+        <TodoItem key={item.id}>{item.title}</TodoItem>
       ))}
     </>
   );
