@@ -14,7 +14,7 @@ function TodoList() {
       <TodoListStats />
       <TodoItemCreator />
       {todoList.map((item) => (
-        <TodoItem key={item.id}>{item.title}</TodoItem>
+        <TodoItem key={item.id} item={item} />
       ))}
     </>
   );
