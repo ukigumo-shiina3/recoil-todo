@@ -13,6 +13,7 @@ function TodoItemCreator() {
 
   const addItem = () => {
     setTodoList((oldTodoList) => [
+      // ...oldTodoList:配列への追加処理
       ...oldTodoList,
       {
         id: getId(),
