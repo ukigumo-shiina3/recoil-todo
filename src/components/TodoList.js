@@ -1,5 +1,5 @@
 import { useRecoilState, useRecoilValue } from "recoil";
-import { todoListFilterState, todoListState } from "../atom";
+import { todoListFilterState } from "../atom";
 import TodoListStats from "./TodoListStats";
 import TodoItemCreator from "./TodoItemCreator";
 import TodoItem from "./TodoItem";
@@ -22,6 +22,8 @@ function TodoList() {
         <option value="すべて">すべて</option>
         <option value="完了">完了</option>
         <option value="未完了">未完了</option>
+        <option value="期限間近">期限間近</option>
+        <option value="期限切れ">期限切れ</option>
       </select>
       <TodoItemCreator />
       {todoList.map((item) => (
