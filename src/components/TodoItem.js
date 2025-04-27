@@ -1,7 +1,7 @@
 import { useRecoilState } from "recoil";
 import { todoListState } from "../atom";
 
-function TotoItem({ item }) {
+function TodoItem({ item }) {
   const [todoList, setTodoList] = useRecoilState(todoListState);
   const deleteItem = () => {
     // findIndex():条件に対して見つかった配列での配列番号を取得
@@ -37,4 +37,4 @@ function TotoItem({ item }) {
   );
 }
 
-export default TotoItem;
+export default TodoItem;
